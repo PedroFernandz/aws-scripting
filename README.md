@@ -8,14 +8,14 @@ Este repositorio contiene una colección de scripts en **Python** diseñados par
 
 ## 📂 Contenido del Repositorio
 
-| Script                           | Descripción                                                                                     | Icono  |
-| -------------------------------- | ----------------------------------------------------------------------------------------------- | ------ |
-| `autoscaling_zabbix.py`          | Obtiene métricas de grupos de Auto Scaling y las envía a Zabbix.                                  | 🔄     |
-| `cloudwatch_zabbix.py`           | Recupera métricas personalizadas desde CloudWatch para su integración con Zabbix.                 | 🌩️    |
-| `ebs_stats.py`                   | Extrae estadísticas de volúmenes EBS (IOPS, throughput, latencia, etc.).                         | 💽     |
-| `ec2_stats.py`                   | Recopila estadísticas y métricas de instancias EC2 (uso de CPU, tráfico de red, etc.).             | 🖥️     |
-| `lambda_zabbix.py`               | Monitorea funciones AWS Lambda, extrayendo métricas como invocaciones, errores y duración.         | 🌀     |
-| `rds_stats.py`                   | Obtiene estadísticas de instancias RDS (uso de CPU, latencia de lectura/escritura, conexiones, etc.)| 🗄️     |
+| Script                           | Descripción                                                                                     |
+| -------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `autoscaling_zabbix.py`          | Obtiene métricas de grupos de Auto Scaling y las envía a Zabbix.                                  |
+| `cloudwatch_zabbix.py`           | Recupera métricas personalizadas desde CloudWatch para su integración con Zabbix.                 |
+| `ebs_stats.py`                   | Extrae estadísticas de volúmenes EBS (IOPS, throughput, latencia, etc.).                         |
+| `ec2_stats.py`                   | Recopila estadísticas y métricas de instancias EC2 (uso de CPU, tráfico de red, etc.).             |
+| `lambda_zabbix.py`               | Monitorea funciones AWS Lambda, extrayendo métricas como invocaciones, errores y duración.         |
+| `rds_stats.py`                   | Obtiene estadísticas de instancias RDS (uso de CPU, latencia de lectura/escritura, conexiones, etc.)|
 
 ---
 
