@@ -16,7 +16,8 @@ Este repositorio contiene una colección de scripts en **Python** diseñados par
 | `ec2_stats.py`                   | Recopila estadísticas y métricas de instancias EC2 (uso de CPU, tráfico de red, etc.).             |
 | `lambda_zabbix.py`               | Monitorea funciones AWS Lambda, extrayendo métricas como invocaciones, errores y duración.         |
 | `rds_stats.py`                   | Obtiene estadísticas de instancias RDS (uso de CPU, latencia de lectura/escritura, conexiones, etc.)|
-
+| `cleanup_amis_snapshots.py` | Elimina AMIs y sus snapshots asociados en la región especificada.                                 |
+| `s3_cleanup_versions.py`    | Elimina todas las versiones de objetos y marcadores de eliminación en un bucket de S3 específico.|
 ---
 
 ## ⚙️ Requisitos
@@ -92,5 +93,34 @@ Obtiene estadísticas de instancias RDS, como uso de CPU, latencia de lectura/es
 python rds_stats.py --db-instance-identifier mydbinstance
 
 ```
+
+### `cleanup_amis_snapshots.py` 🧹
+
+**Descripción:**
+Este script se conecta a tu cuenta de AWS en la región especificada y elimina las Amazon Machine Images (AMIs) y sus snapshots asociados. Está diseñado para ayudar a limpiar AMIs no deseadas y liberar espacio de almacenamiento.
+
+**Uso:**
+1. Asegúrate de tener configuradas tus credenciales de AWS y de que el usuario tenga permisos para gestionar AMIs y snapshots.
+2. Modifica el script para especificar la región deseada cambiando el valor de la variable `REGION`.
+3. Ejecuta el script:
+   ```bash
+   python cleanup_amis_snapshots.py
+   ```
+
+---
+
+### `s3_cleanup_versions.py` 🗑️
+
+**Descripción:**
+Este script se conecta a tu bucket de Amazon S3 y elimina todas las versiones de objetos y los marcadores de eliminación presentes. Es útil para limpiar buckets con versionado habilitado y liberar espacio de almacenamiento.
+
+**Uso:**
+1. Asegúrate de tener configuradas tus credenciales de AWS y de que el usuario tenga permisos para gestionar objetos en S3.
+2. Modifica el script para especificar el nombre de tu bucket y la región deseada cambiando los valores de las variables `bucket_name` y `region_name`.
+3. Ejecuta el script:
+   ```bash
+   python s3_cleanup_versions.py
+   ```
+
 
 
