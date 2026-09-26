@@ -1,0 +1,2 @@
+boto3>=1.43.0
+zabbix_utils>=2.0.0
